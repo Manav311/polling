@@ -1,0 +1,10 @@
+# Copyright © 2023 Vouch.io LLC
+#
+# SPDX-License-Identifier: Apache-2.0
+
+build:
+  cmake: zephyr
+  kconfig: zephyr/Kconfig
+
+  settings:
+    dts_root: zephyr
