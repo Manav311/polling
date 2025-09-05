@@ -1,10 +1,13 @@
-
 	
 &spi1 {
-    status = "okay";
+    compatible = "nordic,nrf-spi"; //using SPI as per ERRATA 58
+	status = "okay";
+	pinctrl-0 = <&spi1_default>;
+	pinctrl-1 = <&spi1_sleep>;
+	pinctrl-names = "default", "sleep";
+	cs-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
 
-    cs-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
-
+/* STEP 8.3 Create bme280 node */
     nfc0: st25r@0 {
         compatible = "st,st25r";
         reg = <0x0>;
