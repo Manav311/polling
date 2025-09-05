@@ -1,0 +1,34 @@
+
+	
+&spi1 {
+    status = "okay";
+
+    cs-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
+
+    nfc0: st25r@0 {
+        compatible = "st,st25r";
+        reg = <0x0>;
+        spi-max-frequency = <4000000>;
+        irq-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+
+&pinctrl {
+	spi1_default: spi1_default {
+		group1 {
+				psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
+						<NRF_PSEL(SPIM_MOSI, 0, 28)>,
+						<NRF_PSEL(SPIM_MISO, 0, 27)>;
+		};
+	};
+
+	spi1_sleep: spi1_sleep {
+		group1 {
+				psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
+						<NRF_PSEL(SPIM_MOSI, 0, 28)>,
+						<NRF_PSEL(SPIM_MISO, 0, 27)>;
+				low-power-enable;
+		};
+	};
+};
