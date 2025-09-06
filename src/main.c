@@ -32,7 +32,8 @@ int main()
              
             demoCycle();
 
-            LOG_INF("failed to initialize");
+            LOG_INF("AUJILA");
+
 
              k_sleep(K_MSEC(1000));
 
