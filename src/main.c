@@ -32,6 +32,8 @@ int main()
              
             demoCycle();
 
+            LOG_INF("failed to initialize");
+
              k_sleep(K_MSEC(1000));
 
 
