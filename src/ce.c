@@ -17,7 +17,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "demo_ce.h"
+#include "ce.h"
 #include "utils.h"
 #include "st_errno.h"
 #include "rfal_rf.h"

@@ -18,7 +18,8 @@ project(app LANGUAGES C)
 
 target_sources(app PRIVATE
     src/analogConfigTbl_NFC08A1.c
-    src/demo_ce.c
-    src/demo_polling.c
+    src/ce.c
+    src/polling.c
+    src/bluetooth_manager.c
     src/main.c
     )
